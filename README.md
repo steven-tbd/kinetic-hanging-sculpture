@@ -81,6 +81,52 @@ The winch is assembled by attaching the motor shaft coupler to the flat side of 
 
 ---
 
+## Wiring Instructions
+<img src="wiring-1.JPEG" alt="wiring" width="50%">
+
+This guide explains how to connect the ESP32, TMC22-09 drivers, and NEMA 17 stepper motors.
+
+### 1. Power Connections (Critical)
+
+**It is essential to create a common ground between the 12V motor power supply and the ESP32.**
+
+*   **Motor Power (12V):**
+    *   Connect the **12V V+** terminal from the power supply to the **VMOT** pin on **each** of the five TMC2209 drivers.
+    *   Connect the **GND (V-)** terminal from the power supply to the **GND** pin (next to VMOT) on **each** of the five TMC2209 drivers.
+
+*   **Logic Power (5V):**
+    *   Connect the **5V** pin from the ESP32 to the **VIO** pin on **each** of the five TMC2209 drivers.
+    *   Connect a **GND** pin from the ESP32 to the **GND** pin (next to VIO) on **each** of the five TMC2209 drivers.
+
+*   **Common Ground:**
+    *   Connect the **GND** from the 12V power supply to the **GND** of the ESP32.
+
+### 2. Control Signal Connections (ESP32 to TMC2209 Drivers)
+
+The pin numbers below correspond to the definitions in the `.ino` file.
+
+| Motor | ESP32 Pin | TMC2209 Pin |
+| :---: | :-------: | :---------: |
+|   1   |  Pin 33   |    STEP     |
+|       |  Pin 32   |     DIR     |
+|   2   |  Pin 26   |    STEP     |
+|       |  Pin 25   |     DIR     |
+|   3   |  Pin 21   |    STEP     |
+|       |  Pin 22   |     DIR     |
+|   4   |  Pin 16   |    STEP     |
+|       |  Pin 17   |     DIR     |
+|   5   |   Pin 2   |    STEP     |
+|       |   Pin 4   |     DIR     |
+
+### 3. Motor Coil Connections (TMC2209 Drivers to NEMA 17 Motors)
+
+For each of the five motors, connect its four wires to the corresponding output pins on its TMC2209 driver: **A1, A2, B1, B2**.
+
+> **Note:** The wire colors for the coil pairs (A and B) can vary between motors. If a motor turns in the wrong direction, you can either reverse the `DIR` pin logic in the code or simply flip the connection for one of the two coils (e.g., swap the A1 and A2 wires).
+
+<img src="wiring-2.JPEG" alt="wiring" width="50%">
+---
+
 ### Project Link
 
 *   **Project Write-up:** [https://stevenmbenton.com/kinetic-hanging-sculpture/](https://stevenmbenton.com/kinetic-hanging-sculpture/)
