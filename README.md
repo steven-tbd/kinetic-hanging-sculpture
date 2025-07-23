@@ -59,8 +59,8 @@ OUTPUT: [ESP32/Arduino IDE (Processor/C++)] ---> (STEP/DIR) ---> [5x TMC2209 Dri
 
 A key part of this research was developing a simple, reliable, and replicable winch mechanism using common off-the-shelf components. The goal was to create a functional system without the need for custom 3D printing or specialized parts.
 
-![Winch Components](winch-1.jpg)
-![Winch Components](winch-2.jpg)
+<img src="winch-1.JPEG" alt="winch design" width="50%">
+<img src="winch-2.JPEG" alt="winch design" width="50%">
 
 ### Bill of Materials (per winch)
 
@@ -77,7 +77,10 @@ A key part of this research was developing a simple, reliable, and replicable wi
 
 The winch is assembled by attaching the motor shaft coupler to the flat side of the plastic spool using M3 screws. This combined unit is then mounted directly onto the NEMA 17 motor's shaft. The braided fishing line is tied to the spool, and the wooden ball is attached to the other end of the line with a small eye hook.
 
-![Assembled Winch](winch-3.jpg)
-
+<img src="winch-3.JPEG" alt="winch design" width="50%">
 
 ---
+
+### Project Link
+
+*   **Project Write-up:** [https://stevenmbenton.com/kinetic-hanging-sculpture/](https://stevenmbenton.com/kinetic-hanging-sculpture/)
