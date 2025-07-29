@@ -129,4 +129,4 @@ For each of the five motors, connect its four wires to the corresponding output 
 
 ### Project Link
 
-*   **Project Write-up:** [https://stevenmbenton.com/kinetic-hanging-sculpture/](https://stevenmbenton.com/kinetic-hanging-sculpture/)
+*   **Project Write-up:** [https://stevenmbenton.com/kinetic-hanging-sculpture/](https://stevenmbenton.com/project/kinetic-hanging-sculpture/)
