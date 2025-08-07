@@ -16,13 +16,12 @@ This repository contains the C++ code and winch design for a self-contained, pre
 
 ---
 
-## I/O Diagram (Version 2 Prototype)
+## IO Diagram (Version 2 Prototype)
 ```
-INPUT:  [N/A - Pre-programmed Animation]
-OUTPUT: [ESP32/Arduino IDE (Processor/C++)] ---> (STEP/DIR) ---> [5x TMC2209 Drivers (Motor Control Board)] ---> (Phase Current) ---> [5x Stepper Motors (Actuator)]
+[ESP32/Arduino IDE (Processor/C++)] ---> (STEP/DIR) ---> [5x TMC2209 Drivers (Motor Control Board)] ---> (Phase Current) ---> [5x Stepper Motors (Actuator)]
 ```
-> - Animation logic (e.g., sine wave) is programmed directly on the ESP32 using the AccelStepper library.
-
+>- Development Environment: The C++ firmware was developed using the Arduino IDE.
+>- Animation logic (e.g., a sine wave) is programmed directly on the ESP32 using the AccelStepper library.
 ---
 
 ## Repository Contents
